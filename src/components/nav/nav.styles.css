@@ -1,0 +1,10 @@
+.nav {
+    height: 50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    margin-right: 50px;
+}
