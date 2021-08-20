@@ -1,20 +1,16 @@
 import React from 'react';
-import whiskey from '../src/imgs/whiskey.jpg';
-import hazel from '../src/imgs/hazel.jpg';
-import tubby from '../src/imgs/tubby.jpg';
+import { Link } from 'react-router-dom';
 import './dog.styles.css';
 
-class Dog extends React.Component {
-
-    render() {
-        
-        return (
-            <div>
-                <p>Hi! My name is {this.props.name} </p>
-                <img src={this.props.url} alt={this.props.name} height='300' width='300'/>
-            </div>
-        )
-    }
-}
-
+const Dog = props => {
+    return (
+        <div  className='dog'>
+            <p>Hi! My name is {props.name}! </p>
+            <Link to={`/${props.name}`}>
+            <img className='dog-img' src={props.src} alt={props.name} height='300' width='300'/>
+            </Link>
+            
+        </div>
+    )
+} 
 export default Dog;

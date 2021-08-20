@@ -1,3 +1,5 @@
+import React from 'react';
+
 import whiskey from '../src/imgs/whiskey.jpg';
 import hazel from '../src/imgs/hazel.jpg';
 import tubby from '../src/imgs/tubby.jpg';

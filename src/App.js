@@ -1,8 +1,11 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 
+import Home from './components/home/home.component';
+import DogPage from './components/dog/dog.components';
+
 import Nav from './components/nav/nav.components';
-import Dog from './components/dog/dog.components';
+// import Dog from './components/dog/dog.components';
 
 
 import './App.css';
@@ -19,15 +22,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <Nav />
-        <div className='gallery'>
-          <h1>Click a dog!</h1>
-          {this.props.dogs.map(dog => <Dog {...dog}/>)}
-        </div>
-        
-        {/* <Switch>
-          <Route exact path='/dog' render={() => <App />} />
-          <Route exact path='/dog/:name' render={() => <Dog name={}/>} />
-        </Switch> */}
+
+        <Switch>
+        <Route path="/"
+               render={routeProps => <Home {...routeProps} />} />
+          {/* <Route exact path='/dog/:name' render={() => <DogPage name={}/>} /> */}
+        </Switch>
       </div>
     );
   }
